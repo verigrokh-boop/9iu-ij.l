@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стоматология "Улыбка"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🦷 Стоматология "Улыбка"</div>
+    <nav>
+        <a href="#services">Услуги</a>
+        <a href="#doctors">Врачи</a>
+        <a href="#price">Прайс</a>
+        <a href="#appointment">Запись</a>
+        <a href="#licenses">Лицензии</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Здоровые зубы — красивая улыбка</h1>
+    <p>Современное оборудование, опытные врачи, доступные цены</p>
+    <a href="#appointment" class="btn">Записаться онлайн</a>
+</section>
+
+<!-- УСЛУГИ с фильтрацией -->
+<section id="services">
+    <h2>Наши услуги</h2>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">Все</button>
+        <button class="filter-btn" data-category="treatment">Лечение</button>
+        <button class="filter-btn" data-category="prosthetics">Протезирование</button>
+        <button class="filter-btn" data-category="whitening">Отбеливание</button>
+    </div>
+    <div class="services-container" id="servicesContainer"></div>
+</section>
+
+<!-- ВРАЧИ -->
+<section id="doctors">
+    <h2>Наши врачи</h2>
+    <div class="doctors-container" id="doctorsContainer">
+        <!-- Заполняется из JS -->
+    </div>
+</section>
+
+<!-- ПРАЙС-ЛИСТ с сортировкой -->
+<section id="price">
+    <h2>Прайс-лист</h2>
+    <div class="sort-buttons">
+        <button id="sortAsc">⬆ По возрастанию</button>
+        <button id="sortDesc">⬇ По убыванию</button>
+    </div>
+    <table id="priceTable">
+        <thead>
+            <tr><th>Услуга</th><th>Цена (₽)</th></tr>
+        </thead>
+        <tbody id="priceBody"></tbody>
+    </table>
+</section>
+
+<!-- ФОРМА ЗАПИСИ -->
+<section id="appointment">
+    <h2>Записаться на приём</h2>
+    <form id="appointmentForm">
+        <input type="text" id="name" placeholder="Ваше имя" required>
+        <input type="tel" id="phone" placeholder="Телефон" required>
+        <select id="serviceSelect">
+            <option value="">Выберите услугу</option>
+        </select>
+        <input type="date" id="date">
+        <button type="submit">Отправить заявку</button>
+        <div id="formMessage"></div>
+    </form>
+</section>
+
+<!-- ЛИЦЕНЗИИ -->
+<section id="licenses">
+    <h2>Лицензии и сертификаты</h2>
+    <div class="licenses-gallery" id="licensesGallery">
+        <!-- Заполняется из JS -->
+    </div>
+</section>
+
+<!-- Модальное окно для увеличения лицензий -->
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
+<footer>
+    <p>© 2025 Стоматология "Улыбка". Все права защищены.</p>
+    <p>Адрес: г. Москва, ул. Цветочная, д. 10 | Телефон: +7 (495) 123-45-67</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
